@@ -80,14 +80,18 @@ p {
     line-height: 2.6rem;
     text-transform: uppercase;
     text-decoration: none;
+    
 }
 
 .btnLight{
     color: $black;
     background-color: $highlightColor;
+    padding: 15px;
 }
 
 .btnDark {
     background-color: $black;
     color: $textColor;
+    
+    padding: 10px 20px;
 }
