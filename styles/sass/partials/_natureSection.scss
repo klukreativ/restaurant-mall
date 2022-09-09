@@ -1,4 +1,31 @@
+@use 'variables' as *;
+
 .nature .wrapper {
-    padding: 100px;
+    padding: 100px 150px;
     display: flex;
+    align-items: space-between;
+    justify-content: flex-start;
+
+    .natureImage {
+        width: 33%;
+        img {
+            width: 100%;
+            max-width: 300px;
+            box-shadow: -15px 15px  $highlightColor;
+        }
+    }
+
+    .natureContent {
+        display: flex;
+        flex-direction: column;
+        width: 66%;
+        gap: 30px;
+        h2 {
+            line-height: 2.813rem;
+        }
+    }
+
+    .button {
+        width: fit-content;
+    }
 }
