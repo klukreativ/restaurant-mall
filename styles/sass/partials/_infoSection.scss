@@ -1,0 +1,38 @@
+@use './variables' as *;
+
+.info {
+    ul {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+
+        li {
+            display: flex;
+            width: 80%;
+            margin: 20px;
+        }
+    }
+}
+
+.infoIconContainer {
+    background-color: $highlightColor;
+    width: 1.7rem;
+    height: 1.7rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .infoIcons {
+        width: 1rem;
+        height: 1rem;
+    }
+}
+
+.infoContent {
+    width: 80%;
+    h2 {
+        color: $textColor;
+        margin-bottom: 15px;
+    }
+}

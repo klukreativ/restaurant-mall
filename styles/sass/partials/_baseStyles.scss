@@ -1,0 +1,16 @@
+@use './variables' as *;
+
+footer {
+    background: $black;
+}
+.primaryBG {
+    background: $primaryBackground;
+}
+
+.secondaryBG {
+    background: $secondaryBackground;
+}
+
+ul {
+    margin: 0;
+}

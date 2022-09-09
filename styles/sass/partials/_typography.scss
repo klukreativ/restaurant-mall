@@ -2,7 +2,9 @@
 
 @font-face {
     font-family: "Josefin Sans";
-    src: url('../fonts/JosefinSans/JosefinSans-Regular.ttf');
+    src: url('../JosefinSans/josefin-sans-latin-400-normal.woff'),
+        url('../fonts/JosefinSans/JosefinSans-Regular.ttf'),
+        url('../JosefinSans/josefin-sans-latin-400-normal.woff2');
     font-weight: normal;
 }
 
@@ -14,6 +16,78 @@
 
 @font-face {
     font-family: "Barlow";
-    src: url('../fonts/Barlow/Barlow-Regular.ttf');
+    src: url('../fonts/Barlow/barlow-latin-400-normal.woff'),
+        url('../fonts/Barlow/Barlow-Regular.ttf'),
+        url('../fonts/Barlow/barlow-latin-400-normal.woff2');
     font-weight: normal;
+}
+
+
+h1 {
+    font-family: $primaryFont;
+    font-weight: bold;
+    font-size: 4.375rem;
+    color: $textColor;
+    text-transform: uppercase;
+    display: flex;
+    flex-direction: column;   
+
+    span {
+        background-color: $textColor;
+        color: $black;
+    }
+}
+
+h2 {
+    font-family: $primaryFont;
+    text-transform: uppercase;
+    margin: 0;
+    font-size: 2.813rem;
+    line-height: 6.238rem;
+}
+
+.headPri {
+    color: $textColor;
+}
+
+.headSec {
+    color: $highlightColor;
+}
+
+nav a {
+    font-family: $primaryFont;
+    color: $textColor;
+    font-size: 1.25rem;
+}
+
+p {
+    font-family: "Barlow";
+    font-size: 1.25rem;
+    line-height: 1.813rem;
+    letter-spacing: 0.063rem;
+    color: $textColor;
+    margin: 0;
+}
+
+.nature h2{
+    color: $highlightColor;
+}
+
+.button {
+    font-family: "Josefin Sans";
+    font-size: 1.25rem;
+    text-align: center;
+    line-height: 2.6rem;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+.btnLight{
+    color: $black;
+    background-color: $highlightColor;
+}
+
+.btnDark {
+    background-color: $black;
+    color: $textColor;
 }

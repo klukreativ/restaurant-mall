@@ -1,0 +1,13 @@
+.headerHome {
+    background-image: url('../assets/home-header.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.bannerImage {
+    background-image: url('../assets/banner.jpg');
+    background-position: center;
+    width: 100%;
+    height: 50vh;
+}
