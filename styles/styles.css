@@ -198,6 +198,8 @@ h1 {
 h1 span {
   background-color: #FFFFFF;
   color: #0f0f0f;
+  padding: 15px 10px 0;
+  margin-bottom: 15px;
 }
 
 h2 {
@@ -247,7 +249,7 @@ p {
 .btnLight {
   color: #0f0f0f;
   background-color: #FFD300;
-  padding: 15px;
+  padding: 5px 15px;
 }
 
 .btnDark {
@@ -314,6 +316,9 @@ nav ul a {
   text-decoration: none;
 }
 
+.info {
+  padding: 200px 0 150px;
+}
 .info ul {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -363,8 +368,97 @@ nav ul a {
   margin-bottom: 15px;
 }
 
+@media (min-width: 1000px) {
+  .info ul li {
+    width: 40%;
+    gap: 5%;
+  }
+  .info ul h2 {
+    line-height: 2.813rem;
+  }
+  .infoIconContainer {
+    width: 4rem;
+    height: 4rem;
+  }
+  .infoIconContainer .infoIcons {
+    width: 2rem;
+    height: 2rem;
+  }
+}
+.articleContainerOne,
+.articleContainerTwo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: space-between;
+      -ms-flex-align: space-between;
+          align-items: space-between;
+}
+.articleContainerOne .articleContent,
+.articleContainerTwo .articleContent {
+  padding: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.articleContainerOne .articleContent p,
+.articleContainerTwo .articleContent p {
+  margin-bottom: 30px;
+}
+.articleContainerOne .articleContent a,
+.articleContainerTwo .articleContent a {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.articleContent,
+.articleImage {
+  width: 50%;
+}
+
+.articleImage img {
+  width: 100%;
+  max-width: 700px;
+  position: relative;
+  -webkit-box-shadow: 20px 20px #FFD300;
+          box-shadow: 20px 20px #FFD300;
+}
+
+@media (min-width: 1000px) {
+  .articleContent {
+    width: 45%;
+  }
+  .articleContainerTwo {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+  }
+  .articleContainerTwo .articleContent {
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+  }
+  .articleContainerTwo p {
+    text-align: right;
+  }
+  .artImgOne {
+    top: -50px;
+  }
+  .articleImage .artImgTwo {
+    bottom: -50px;
+    -webkit-box-shadow: -20px 20px #FFD300;
+            box-shadow: -20px 20px #FFD300;
+    float: right;
+  }
+}
 .promotion .wrapper {
-  padding: 100px;
+  padding: 150px 50px;
   max-width: 1100px;
   margin: auto;
   display: -webkit-box;
@@ -383,7 +477,7 @@ nav ul a {
 }
 
 .nature .wrapper {
-  padding: 100px 150px;
+  padding: 150px 150px 100px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

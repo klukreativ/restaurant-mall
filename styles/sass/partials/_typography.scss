@@ -30,11 +30,13 @@ h1 {
     color: $textColor;
     text-transform: uppercase;
     display: flex;
-    flex-direction: column;   
+    flex-direction: column;
 
     span {
         background-color: $textColor;
         color: $black;
+        padding:  15px 10px 0;
+        margin-bottom: 15px;
     }
 }
 
@@ -86,7 +88,7 @@ p {
 .btnLight{
     color: $black;
     background-color: $highlightColor;
-    padding: 15px;
+    padding: 5px 15px;
 }
 
 .btnDark {

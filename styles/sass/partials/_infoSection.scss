@@ -1,6 +1,7 @@
 @use './variables' as *;
 
 .info {
+    padding: 200px 0 150px;
     ul {
         display: flex;
         flex-wrap: wrap;
@@ -34,5 +35,27 @@
     h2 {
         color: $textColor;
         margin-bottom: 15px;
+    }
+}
+
+@media (min-width: 1000px) {
+    .info ul {
+
+        li{
+            width: 40%;
+            gap: 5%;
+        } 
+        h2 {
+            line-height: 2.813rem;
+        }
+    } 
+
+    .infoIconContainer {
+        width: 4rem;
+        height: 4rem;
+        .infoIcons {
+            width: 2rem;
+            height: 2rem;
+        }
     }
 }

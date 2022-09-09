@@ -1,0 +1,61 @@
+@use './variables' as *;
+
+.articleContainerOne,
+.articleContainerTwo {
+    display: flex;
+    align-items: space-between;
+
+    .articleContent {
+        padding: 50px;
+        display: flex;
+        flex-direction: column;
+
+        p {
+            margin-bottom: 30px;
+        }
+        a {
+            width: fit-content;
+        }
+
+    }
+}
+
+.articleContent,
+.articleImage {
+    width: 50%;
+}
+
+
+.articleImage img {
+    width: 100%;
+    max-width: 700px;
+    position: relative;
+    box-shadow: 20px 20px $highlightColor;
+}
+
+
+
+@media (min-width: 1000px) {
+    .articleContent {
+        width: 45%;
+    }
+    .articleContainerTwo {
+        flex-direction: row-reverse;
+        .articleContent{
+            align-items: flex-end;
+        }
+        p {
+            text-align: right;
+        }
+    }
+
+    .artImgOne {
+        top: -50px;
+    }
+
+    .articleImage .artImgTwo {
+        bottom: -50px;
+        box-shadow: -20px 20px $highlightColor;
+        float: right; //temporary stopgap
+    }
+}
