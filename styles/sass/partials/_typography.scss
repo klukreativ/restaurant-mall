@@ -26,7 +26,7 @@
 h1 {
     font-family: $primaryFont;
     font-weight: bold;
-    font-size: clamp(3rem, 7.3vw, 4.375rem);
+    font-size: clamp(3rem, 4.45vw, 4.375rem);
     color: $textColor;
     text-transform: uppercase;
     display: flex;
@@ -44,8 +44,8 @@ h2 {
     font-family: $primaryFont;
     text-transform: uppercase;
     margin: 0;
-    font-size: 2.813rem;
-    line-height: 6.238rem;
+    font-size: clamp(2rem, 8vw, 2.813rem);
+    line-height: 3rem;
 }
 
 .headPri {
@@ -96,4 +96,11 @@ p {
     color: $textColor;
     
     padding: 10px 20px;
+}
+
+@media (min-width: 1000px) {
+    h2 {
+        line-height: 6.238rem;
+    }
+    
 }

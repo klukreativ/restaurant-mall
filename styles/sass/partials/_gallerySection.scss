@@ -1,12 +1,33 @@
 .gallery .wrapper {
-    padding: 100px;
+    padding: 50px;
     display: flex;
     align-items: space-between;
     gap: 30px;
+
     .galleryImage {
-        width: 33%;
+        width: 50%;
+
         img {
             width: 100%;
         }
+
     }
+
+    .gImg3 {
+        display: none;
+    }
+}
+
+@media (min-width: 1000px) {
+    .gallery .wrapper {
+        padding: 100px;
+        .galleryImage {
+            width: 33%;
+        }
+
+        .gImg3 {
+            display: block;
+        }
+    }
+
 }

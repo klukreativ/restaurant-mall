@@ -3,9 +3,9 @@ header .wrapper {
     height: 70vh;   
     width: 100vw;
     display: flex;
+    flex-direction: column;
     align-items: space-between;
-    .left {
-        width: 50%;
+    .left {       
         display: flex;
         flex-direction: column;
         align-items: flex-start;
@@ -14,10 +14,10 @@ header .wrapper {
         }
     }
     .right {
-        width: 50%;
-        img {
-            position: relative;
-            bottom: -150px;            
+        position: relative;
+        bottom: -50px;
+        right: -33px;
+        img {                      
             width: 100%;
         }
     }
@@ -26,6 +26,25 @@ header .wrapper {
 @media (min-width: 1000px) {
     header .wrapper{
         padding: 50px 0 0 100px;
-    }
+        flex-direction: row;
+        .left {
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            ul {
+                padding: 0;
+            }
+        }
     
+        .right {
+            width: 50%;
+            img {
+                position: relative;
+                bottom: -100px;            
+                width: 100%;
+            }
+        }
+    
+    }
 }

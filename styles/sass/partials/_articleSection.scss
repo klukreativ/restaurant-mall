@@ -1,8 +1,13 @@
 @use './variables' as *;
 
+.articleSection {
+    padding: 100px 0 50px;
+}
+
 .articleContainerOne,
 .articleContainerTwo {
     display: flex;
+    flex-direction: column;
     align-items: space-between;
 
     .articleContent {
@@ -13,49 +18,71 @@
         p {
             margin-bottom: 30px;
         }
+
         a {
             width: fit-content;
         }
-
     }
 }
 
-.articleContent,
 .articleImage {
-    width: 50%;
+    display: flex;
+    justify-content: center;
+
+    img {
+        width: 80%;
+        box-shadow: 20px 20px $highlightColor;
+    }
 }
-
-
-.articleImage img {
-    width: 100%;
-    max-width: 700px;
-    position: relative;
-    box-shadow: 20px 20px $highlightColor;
-}
-
-
 
 @media (min-width: 1000px) {
-    .articleContent {
-        width: 45%;
+    .articleSection {
+        padding: 0;
     }
+
+    .articleContent,
+    .articleImage {
+        width: 50%;
+    }
+
+    .articleImage img {
+        width: 100%;
+        max-width: 700px;
+        position: relative;
+
+    }
+
+    .articleContainerOne {
+        flex-direction: row;
+
+        .articleImage {
+            justify-content: flex-start;
+
+            .artImgOne {
+                top: -50px;
+            }
+        }
+    }
+
     .articleContainerTwo {
         flex-direction: row-reverse;
-        .articleContent{
+
+        .articleContent {
             align-items: flex-end;
         }
+
         p {
             text-align: right;
         }
-    }
 
-    .artImgOne {
-        top: -50px;
-    }
+        .articleImage {
+            justify-content: flex-end;
 
-    .articleImage .artImgTwo {
-        bottom: -50px;
-        box-shadow: -20px 20px $highlightColor;
-        float: right; //temporary stopgap
+            .artImgTwo {
+                bottom: -50px;
+                box-shadow: -20px 20px $highlightColor;
+                float: right; //temporary stopgap
+            }
+        }
     }
 }

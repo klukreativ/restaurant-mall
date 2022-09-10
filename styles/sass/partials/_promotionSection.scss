@@ -8,4 +8,21 @@
     p {
         margin-bottom: 30px;
     }
+    h2 {
+        text-align: center;
+    }
+    span {
+        display: block;
+    }
+}
+
+@media (min-width: 1000px) {
+    .promotion .wrapper {
+        h2 {
+            text-align: left;
+        }
+        span {
+            display: inline;
+        }
+    }
 }

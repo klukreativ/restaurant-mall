@@ -1,24 +1,42 @@
 @use 'variables' as *;
 
-.nature .wrapper {
-    padding: 150px 150px 100px;
-    display: flex;
-    align-items: space-between;
-    justify-content: flex-start;
 
+// .nature .wrapper {
+//     padding: 100px 50px;
+//     display: flex;
+//     flex-direction: column;
+//     justify-content: center;
+//     .natureImage{
+//         width: 100%;
+//         img {
+//             width: 100%;
+//         }
+//     }
+// }
+
+
+.nature .wrapper {
+    padding: 100px 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
     .natureImage {
-        width: 33%;
+        width: 100%;
+        max-width: 50vw;
+        margin-bottom: 50px;
         img {
             width: 100%;
-            max-width: 300px;
+            
             box-shadow: -15px 15px  $highlightColor;
-        }
+        }        
     }
 
     .natureContent {
         display: flex;
         flex-direction: column;
-        width: 66%;
+        width: 100%;
         gap: 30px;
         h2 {
             line-height: 2.813rem;
@@ -27,5 +45,22 @@
 
     .button {
         width: fit-content;
+    }
+}
+
+@media (min-width: 1000px) {
+    .nature .wrapper {
+        padding: 150px 150px 100px;
+        flex-direction: row;
+        align-items: flex-start;
+        gap: 50px;
+    }
+    .natureImage {
+        width: 33%;
+        margin-bottom: 0;
+        img {
+            width: 40%;
+            max-width:400px;
+        }
     }
 }
