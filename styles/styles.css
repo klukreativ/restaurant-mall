@@ -184,7 +184,7 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
 h1 {
   font-family: "Josefin Sans";
   font-weight: bold;
-  font-size: 4.375rem;
+  font-size: clamp(3rem, 7.3vw, 4.375rem);
   color: #FFFFFF;
   text-transform: uppercase;
   display: -webkit-box;
@@ -275,11 +275,18 @@ ul {
 }
 
 header .wrapper {
-  padding: 50px 0 0 100px;
+  padding: 50px;
   height: 70vh;
   width: 100vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: space-between;
+      -ms-flex-align: space-between;
+          align-items: space-between;
 }
 header .wrapper .left {
+  width: 50%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -295,10 +302,19 @@ header .wrapper .left ul {
   padding: 0;
 }
 header .wrapper .right {
+  width: 50%;
+}
+header .wrapper .right img {
   position: relative;
-  top: -20vh;
+  bottom: -150px;
+  width: 100%;
 }
 
+@media (min-width: 1000px) {
+  header .wrapper {
+    padding: 50px 0 0 100px;
+  }
+}
 nav ul {
   list-style: none;
   display: -webkit-box;
