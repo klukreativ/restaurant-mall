@@ -6,6 +6,7 @@ nav{
         display: flex;
         gap: 40px;
         li {
+            padding: 10px;
             border-bottom: 2px solid rgba(0,0,0,0);
             &:hover{
                 border-bottom: 2px solid $highlightColor;

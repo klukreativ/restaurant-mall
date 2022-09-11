@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./styles/styles.css">
+    <link rel="stylesheet" href="./styles/contact.css">
+    <script src="https://kit.fontawesome.com/caaf7d8a53.js" crossorigin="anonymous"></script>
     <title>The Restaurant Mall | Contact</title>
 </head>
+
 <body>
     <header>
         <div class="wrapper">
@@ -20,12 +23,52 @@
                     </ul>
                 </nav>
                 <h1>Get in Touch</h1>
-            </div>            
+            </div>
         </div>
     </header>
-
+    <main>
+        <div class="contact wrapper secondaryBG">
+            <section class="contactForm primaryBG">
+                <form action="">
+                    <div class="formControl">
+                        <div class="formItem">
+                            <label for="contactName"></label>
+                            <input type="text" name="contactName" id="contactName" placeholder="Name" class="formSmall">
+                        </div>
+                        <div class="formItem">
+                            <label for="contactEmail"></label>
+                            <input type="email" name="contactEmail" id="contactEmail" placeholder="Email address"
+                                class="formSmall">
+                        </div>
+                    </div>
+                    <div>
+                        <textarea>Message</textarea>
+                    </div>
+                    <input type="submit" class='button btnLight' value="Submit">
+                </form>
+            </section>
+            <section class="contactInfoContainer ">
+                <div class="socialMediaIcons">
+                    <i class="fa-brands fa-facebook-f"></i>
+                    <i class="fa-brands fa-instagram"></i>
+                    <i class="fa-brands fa-twitter"></i>
+                    <i class="fa-brands fa-whatsapp"></i>
+                </div>
+                <div>
+                    <p>info@email.com</p>
+                    <p>
+                        <span>123 - 456 - 7890</span>
+                        <span>123 Queen Street West, Unit 10</span>
+                        <span>Toronto, Ontario</span>
+                        <span>M5V2O5</span>
+                    </p>
+                </div>
+            </section>
+        </div>
+    </main>
     <footer>
         <p>Copyright &copy 2019 Juno College</p>
     </footer>
 </body>
+
 </html>
