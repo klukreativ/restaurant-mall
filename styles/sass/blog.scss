@@ -95,24 +95,27 @@ img {
 }
 
 @media (min-width: 1000px) {
-
-    .blogImageContainer {
-        width: 120%;
-    }
-
     .blogContent {
         flex-direction: row-reverse;
         justify-content: space-between;
         width: 100%;
     }
 
-    .blogCommentImg img {
-        width: 80%;
+    .blogMain {
+        width: 100%;
     }
 
-    .blogMain {
+
+    .blogImageContainer {
+        width: 60vw;
+        position: absolute;
+        top: -30vh;
+        right: 0;
+    }
+
+    .blogPostContent{
+        margin: 25vw auto 0;
         width: 70%;
-        margin: 0 4rem;
     }
 
     .blogSide {
