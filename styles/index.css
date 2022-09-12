@@ -465,6 +465,7 @@ header .wrapper .headerImg img {
 }
 
 .navbar .menu-items {
+  font-family: "Josefin Sans";
   padding-top: 120px;
   background-color: rgba(0, 0, 0, 0.8);
   -webkit-box-shadow: inset 0 0 2000px rgb(0, 0, 0);
@@ -481,6 +482,7 @@ header .wrapper .headerImg img {
       -ms-flex-direction: column;
           flex-direction: column;
   margin-left: -40px;
+  line-height: 3rem;
   -webkit-transition: -webkit-transform 0.5s ease-in-out;
   transition: -webkit-transform 0.5s ease-in-out;
   transition: transform 0.5s ease-in-out;
