@@ -211,6 +211,9 @@ h1 span {
   color: #0f0f0f;
   padding: 15px 10px 0;
   margin-bottom: 15px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
 }
 
 h2 {
@@ -308,7 +311,7 @@ header .wrapper .title {
 }
 header .wrapper .headerImg {
   position: absolute;
-  width: 450px;
+  width: 80vw;
   right: 0;
 }
 header .wrapper .headerImg img {

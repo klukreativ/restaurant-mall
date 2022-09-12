@@ -1,8 +1,9 @@
 @use './variables' as *;
 
-.info {
-    padding: 200px 0 150px;
+.info {    
     ul {
+        padding-bottom: 150px;
+        padding-top: 50vw; //this resizes according to width to scale w/header img
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -34,8 +35,7 @@
     }
 }
 
-.infoContent {
-    
+.infoContent {    
     h2 {
         color: $textColor;
         margin-bottom: 15px;
@@ -44,6 +44,7 @@
 
 @media (min-width: 1000px) {
     .info ul {
+        padding-top: 17vw;
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: center;

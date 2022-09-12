@@ -1,23 +1,17 @@
-header .wrapper {
-    padding: 50px;
+header .wrapper {    
     height: 60vh;   
     width: 100vw;
-    display: flex;
-    flex-direction: column;
-    align-items: space-between;
-    .left {       
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        ul {
-            padding: 0;
-        }
+    // display: flex;
+    // flex-direction: column;
+    // align-items: space-between;
+    .title {
+        padding: 50px;
     }
-    .right {
-        position: relative;
-        bottom: -50px;
-        right: -33px;
-        img {                      
+    .headerImg{
+        position: absolute;
+        width: 80vw;
+        right: 0;
+        img {
             width: 100%;
         }
     }
@@ -25,26 +19,25 @@ header .wrapper {
 
 @media (min-width: 1000px) {
     header .wrapper{
-        padding: 50px 0 0 100px;
-        flex-direction: row;
-        .left {
+        .headerImg {
+            top: clamp(15%, 10vw, 50%);
             width: 50%;
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-            ul {
-                padding: 0;
-            }
-        }
-    
-        .right {
-            width: 50%;
+            max-width: 700px;
             img {
-                position: relative;
-                bottom: -100px;            
                 width: 100%;
             }
         }
-    
+        flex-direction: row; 
+        .title{
+            padding: 50px 0 0 100px;
+        }   
+    }
+}
+
+@media (min-width: 1000px) and (max-width: 1300px) {
+    header .wrapper {
+        .headerImg{
+            top: clamp(25%, 15vw, 50%);
+        }
     }
 }
