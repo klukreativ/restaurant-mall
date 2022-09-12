@@ -1,20 +1,5 @@
 @use 'variables' as *;
 
-
-// .nature .wrapper {
-//     padding: 100px 50px;
-//     display: flex;
-//     flex-direction: column;
-//     justify-content: center;
-//     .natureImage{
-//         width: 100%;
-//         img {
-//             width: 100%;
-//         }
-//     }
-// }
-
-
 .nature .wrapper {
     padding: 100px 50px;
     display: flex;
@@ -27,8 +12,7 @@
         max-width: 50vw;
         margin-bottom: 50px;
         img {
-            width: 100%;
-            
+            width: 100%;            
             box-shadow: -15px 15px  $highlightColor;
         }        
     }
@@ -37,9 +21,8 @@
         display: flex;
         flex-direction: column;
         width: 100%;
-        gap: 30px;
-        h2 {
-            line-height: 2.813rem;
+        p {
+            margin-bottom: 1rem;
         }
     }
 

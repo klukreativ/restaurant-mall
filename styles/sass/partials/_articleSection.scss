@@ -16,7 +16,7 @@
         flex-direction: column;
 
         p {
-            margin-bottom: 30px;
+            margin-bottom: 1rem;
         }
 
         a {
@@ -56,6 +56,7 @@
         flex-direction: row;
 
         .articleImage {
+            display: block;
             justify-content: flex-start;
 
             .artImgOne {
@@ -66,7 +67,9 @@
 
     .articleContainerTwo {
         flex-direction: row-reverse;
-
+        h2 {
+            padding-top: 4rem;
+        }
         .articleContent {
             align-items: flex-end;
         }
@@ -76,6 +79,7 @@
         }
 
         .articleImage {
+            display: block;
             justify-content: flex-end;
 
             .artImgTwo {
@@ -84,5 +88,22 @@
                 float: right; //temporary stopgap
             }
         }
+    }
+}
+
+@media (min-width: 1000px) and (max-width: 1300px) {
+    .articleImage img {
+        position: static;
+    }
+
+    .articleContainerOne{
+        padding: 3rem;
+    }
+
+    .articleContainerTwo {
+        h2{
+            padding-top: 0;
+        }
+        
     }
 }

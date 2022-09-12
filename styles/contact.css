@@ -181,12 +181,23 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
   src: url("../fonts/Barlow/barlow-latin-400-normal.woff"), url("../fonts/Barlow/Barlow-Regular.ttf"), url("../fonts/Barlow/barlow-latin-400-normal.woff2");
   font-weight: normal;
 }
-h1 {
+.primary {
+  color: #FFFFFF;
+}
+
+.secondary {
+  color: #FFD300;
+}
+
+h1, h2, h5, .button {
   font-family: "Josefin Sans";
+  text-transform: uppercase;
+}
+
+h1 {
   font-weight: bold;
   font-size: clamp(3rem, 4.45vw, 4.375rem);
   color: #FFFFFF;
-  text-transform: uppercase;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -203,19 +214,15 @@ h1 span {
 }
 
 h2 {
-  font-family: "Josefin Sans";
-  text-transform: uppercase;
   margin: 0;
   font-size: clamp(2rem, 8vw, 2.813rem);
   line-height: 3rem;
 }
 
-.headPri {
-  color: #FFFFFF;
-}
-
-.headSec {
-  color: #FFD300;
+h5 {
+  font-size: 2.25rem;
+  line-height: 3rem;
+  text-align: center;
 }
 
 nav a {
@@ -234,11 +241,9 @@ p {
 }
 
 .button {
-  font-family: "Josefin Sans";
   font-size: 1.25rem;
   text-align: center;
   line-height: 2.6rem;
-  text-transform: uppercase;
   text-decoration: none;
 }
 
@@ -256,7 +261,20 @@ p {
 
 @media (min-width: 1000px) {
   h2 {
-    line-height: 6.238rem;
+    line-height: 2.813rem;
+    margin-bottom: 0.5rem;
+  }
+  h5 {
+    font-size: 1.563rem;
+    line-height: 2.25rem;
+  }
+}
+@media (min-width: 1000px) and (max-width: 1300px) {
+  h2 {
+    font-size: 2.125rem;
+  }
+  p {
+    font-size: 1.125rem;
   }
 }
 header {
@@ -269,16 +287,16 @@ footer {
   background: #0f0f0f;
 }
 
+ul {
+  margin: 0;
+}
+
 .primaryBG {
   background: #171B0E;
 }
 
 .secondaryBG {
   background: #2B331B;
-}
-
-ul {
-  margin: 0;
 }
 
 header .wrapper {
@@ -376,30 +394,9 @@ footer {
   text-align: center;
 }
 
-header {
-  background-image: url("../assets/contact-header.jpg");
-}
-
-h1 {
-  padding: 75px 0;
-}
-
-.contactInfoContainer {
-  max-width: 400px;
-  margin: auto;
-}
-.contactInfoContainer span {
-  display: block;
-}
-
 .contactForm {
-  width: 80%;
-  -webkit-box-shadow: 25px 25px #FFD300;
-          box-shadow: 25px 25px #FFD300;
-  position: relative;
-  top: -200px;
+  width: 100%;
   margin: auto;
-  padding: 50px;
 }
 .contactForm .formSmall,
 .contactForm .formBody {
@@ -459,6 +456,46 @@ h1 {
   width: 100%;
 }
 
+@media (min-width: 1000px) {
+  .contactForm .formControl {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .contactForm .formControl .formItem {
+    display: inline-block;
+    width: 45%;
+    margin-bottom: 1rem;
+  }
+}
+header {
+  background-image: url("../assets/contact-header.jpg");
+}
+
+h1 {
+  padding: 4.7rem 0;
+}
+
+.contactInfoContainer {
+  max-width: 400px;
+  margin: auto;
+}
+.contactInfoContainer span {
+  display: block;
+}
+
+.contactForm {
+  width: 80%;
+  -webkit-box-shadow: 25px 25px #FFD300;
+          box-shadow: 25px 25px #FFD300;
+  position: relative;
+  top: -200px;
+  padding: 50px;
+}
+
 .contactInfoContainer {
   position: relative;
   top: -10vh;
@@ -505,21 +542,6 @@ h1 {
     -webkit-box-direction: reverse;
         -ms-flex-direction: row-reverse;
             flex-direction: row-reverse;
-  }
-  .contactForm .formControl {
-    margin-bottom: 0;
-  }
-  .contactForm .formControl .formItem {
-    display: inline-block;
-    width: 48%;
-    margin-bottom: 30px;
-    padding: 3%;
-  }
-  .contactForm .formControl :first-child {
-    padding-left: 0;
-  }
-  .contactForm .formControl :last-child {
-    padding-right: 0;
   }
   .contactForm {
     width: 50%;

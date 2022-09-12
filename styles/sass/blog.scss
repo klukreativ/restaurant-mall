@@ -5,16 +5,135 @@
 @use './partials/nav';
 @use './partials/footer';
 @use './partials/contactBody';
+@use './partials/form';
 @use './partials/variables' as *;
 
 header {
     background-image: url('../assets/blog-header.jpg');
 }
 
+h1 {
+    padding: 4.7rem 0;
+}
+
+img {
+    width: 100%;
+}
+
 .blogContent {
-    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: space-between;
+    justify-content: center;
+    width: 80%;
+    margin: auto;
+}
+
+.blogPost,
+.blogCommentSection {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.blogPost {
+    margin-bottom: 5rem;
+}
+
+.blogMain {
+    position: relative;
+    top: -6rem;
+}
+
+.blogImageContainer {
+    position: relative;
+    top: -5rem;
+}
+
+.blogImage {
+    box-shadow: -20px 20px $highlightColor;
+}
+
+.blogCommentSection{
+    width: 90%;
+    padding: 5% 10%;
+    margin: auto;
+    background-color: rgba(0,0,0,0.2);
+}
+
+.blogCommentImg {
+    width: 15%;
+}
+
+.blogCommentContent {
+    width: 85%;
 }
 
 .blogComment {
     display: flex;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.date {
+    font-weight: bold;
+}
+
+.blogSide {
+    background-color: $primaryBackground;
+    padding: 2rem;
+    height: fit-content;
+    margin-bottom: 3rem;
+}
+
+.blogSideRecent li {
+    color: $textColor;
+    font-family: $secondaryFont;
+    font-size: 1.25rem;
+    line-height: 2rem;
+    letter-spacing: 0.063rem;
+}
+
+@media (min-width: 1000px) {
+
+    .blogImageContainer {
+        width: 120%;
+    }
+
+    .blogContent {
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .blogCommentImg img {
+        width: 80%;
+    }
+
+    .blogMain {
+        width: 70%;
+        margin: 0 4rem;
+    }
+
+    .blogSide {
+        width: 30%;
+        margin: 8rem 4rem;
+    }
+
+    .blogSideImageContainer{
+        width: 140%;
+        position: relative;
+        top: -5rem;
+        left: -7rem;
+    }
+
+    .blogSideContent{
+        margin: -4rem 0 2rem;
+    }
+}
+
+@media (min-width: 1000px) and (max-width: 1300px) {
+    .blogSideImageContainer{
+        width: 150%;
+    }
 }

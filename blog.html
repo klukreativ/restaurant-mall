@@ -25,11 +25,14 @@
     </header>
     <main class="blog secondaryBG">
         <div class="blogContent">
-            <div class="blogMain">
-                <img src="../assets/blog-post-image.jpg" alt="waiter setting table">
+            <section class="blogMain">
+                <div class="blogImageContainer">
+                    <img src="../assets/blog-post-image.jpg" class="blogImage" alt="waiter setting table">
+                </div>
+                
                 <div class="blogPost">
-                    <h2 class="headSec">Employment Opportunities</h2>
-                    <p class="blogPostDate">Monday October 30, 2019 by Sulaire</p>
+                    <h2 class="secondary">Employment Opportunities</h2>
+                    <p class="date">Monday October 30, 2019 by Sulaire</p>
                     <p>
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta reiciendis impedit alias non ut, magni aspernatur vitae eaque totam. Dolorum quasi consectetur iusto, velit repellendus quod beatae explicabo eos deleniti?
                         <br/><br/>
@@ -44,15 +47,15 @@
                     </p>
                 </div>
                 <div class="blogCommentSection">
-                    <h2 class="headPri">Comments:</h2>
+                    <h2 class="primary">Comments:</h2>
                     <div class="blogComment">
                         <div class="blogCommentImg">
                             <img src="../assets/comment-1.jpg" alt="user image">
                         </div>
                         <div class="blogCommentContent">
-                            <h5 class="blogCommentDate headSec">
+                            <p class="date secondary">
                                 Tuesday October 9th, 2019 by Ali
-                            </h5>
+                            </p>
                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias adipisci error expedita odio aspernatur laborum at. Fugiat dignissimos neque voluptas iure, rem consectetur, laudantium voluptatem mollitia quo a, cumque quos?</p>
                         </div>
                     </div>
@@ -61,17 +64,53 @@
                             <img src="../assets/comment-2.jpg" alt="user image">
                         </div>
                         <div class="blogCommentContent">
-                            <h5 class="blogCommentDate headSec">
+                            <p class="date secondary">
                                 Wednesday October 10th, 2019 by Lisa
-                            </h5>
+                            </p>
                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias adipisci error expedita odio aspernatur laborum at. Fugiat dignissimos neque voluptas iure, rem consectetur, laudantium voluptatem mollitia quo a, cumque quos?</p>
                         </div>
                     </div>
+                    <div class="contactForm">
+                        <form action="">
+                            <div class="formControl">
+                                <div class="formItem">
+                                    <label for="contactName"></label>
+                                    <input type="text" name="contactName" id="contactName" placeholder="Name" class="formSmall">
+                                </div>
+                                <div class="formItem">
+                                    <label for="contactEmail"></label>
+                                    <input type="email" name="contactEmail" id="contactEmail" placeholder="Email address"
+                                        class="formSmall">
+                                </div>
+                            </div>
+                            <div>
+                                <textarea>Comment</textarea>
+                            </div>
+                            <input type="submit" class='button btnLight' value="post comment">
+                        </form>
+                    </div>
                 </div>
-            </div> <!-- end of blogPost -->
-            <div class="blogSide">
-
-            </div>
+            </section> <!-- end of blogPost -->
+            <section class="blogSide">
+                <div class="blogSideImageContainer">
+                    <img src="../assets/blog-side-image.jpg" alt="">
+                </div>
+                <div class="blogSideContent">
+                    <div class="blogSideFeatured">
+                        <h5 class="blogSideHead secondary">Featured Restaurants</h5>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi, rerum qui dolorum delectus quod soluta natus praesentium, quis voluptates quidem in. Vitae eum numquam rem dicta nam aperiam voluptatibus. Facere.</p>
+                    </div>
+                    <div class="blogSideRecent">
+                        <h5 class="blogSideHead secondary">Recent Posts</h5>
+                        <ul>
+                            <li>Donec facilisis tortor ut</li>
+                            <li>Augue lacinia al viverra</li>
+                            <li>Semper sedisapien metus</li>
+                            <li>Sceleri que nec pharetra id</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
         </div>
 
     </main>
