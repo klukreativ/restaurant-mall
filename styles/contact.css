@@ -300,28 +300,43 @@ ul {
 }
 
 header .wrapper {
-  padding: 50px;
   height: 60vh;
   width: 100vw;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: space-between;
-      -ms-flex-align: space-between;
-          align-items: space-between;
+}
+header .wrapper .title {
+  padding: 50px;
+}
+header .wrapper .headerImg {
+  position: absolute;
+  width: 450px;
+  right: 0;
+}
+header .wrapper .headerImg img {
+  width: 100%;
 }
 
 @media (min-width: 1000px) {
   header .wrapper {
-    padding: 50px 0 0 100px;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
+  }
+  header .wrapper .headerImg {
+    top: clamp(15%, 10vw, 50%);
+    width: 50%;
+    max-width: 700px;
+  }
+  header .wrapper .headerImg img {
+    width: 100%;
+  }
+  header .wrapper .title {
+    padding: 50px 0 0 100px;
+  }
+}
+@media (min-width: 1000px) and (max-width: 1300px) {
+  header .wrapper .headerImg {
+    top: clamp(25%, 15vw, 50%);
   }
 }
 nav ul {
@@ -340,6 +355,11 @@ nav ul li:hover {
 }
 nav ul a {
   text-decoration: none;
+}
+nav ul span {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
 }
 
 footer {

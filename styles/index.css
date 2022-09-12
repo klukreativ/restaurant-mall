@@ -300,75 +300,43 @@ ul {
 }
 
 header .wrapper {
-  padding: 50px;
   height: 60vh;
   width: 100vw;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: space-between;
-      -ms-flex-align: space-between;
-          align-items: space-between;
 }
-header .wrapper .left {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+header .wrapper .title {
+  padding: 50px;
 }
-header .wrapper .left ul {
-  padding: 0;
+header .wrapper .headerImg {
+  position: absolute;
+  width: 450px;
+  right: 0;
 }
-header .wrapper .right {
-  position: relative;
-  bottom: -50px;
-  right: -33px;
-}
-header .wrapper .right img {
+header .wrapper .headerImg img {
   width: 100%;
 }
 
 @media (min-width: 1000px) {
   header .wrapper {
-    padding: 50px 0 0 100px;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
   }
-  header .wrapper .left {
+  header .wrapper .headerImg {
+    top: clamp(15%, 10vw, 50%);
     width: 50%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
+    max-width: 700px;
   }
-  header .wrapper .left ul {
-    padding: 0;
-  }
-  header .wrapper .right {
-    width: 50%;
-  }
-  header .wrapper .right img {
-    position: relative;
-    bottom: -100px;
+  header .wrapper .headerImg img {
     width: 100%;
+  }
+  header .wrapper .title {
+    padding: 50px 0 0 100px;
+  }
+}
+@media (min-width: 1000px) and (max-width: 1300px) {
+  header .wrapper .headerImg {
+    top: clamp(25%, 15vw, 50%);
   }
 }
 nav ul {
@@ -388,11 +356,14 @@ nav ul li:hover {
 nav ul a {
   text-decoration: none;
 }
-
-.info {
-  padding: 200px 0 150px;
+nav ul span {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
 }
+
 .info ul {
+  padding: 200px 0 150px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -610,7 +581,7 @@ nav ul a {
   }
 }
 .promotion .wrapper {
-  padding: 150px 50px;
+  padding: 100px 50px;
   max-width: 1100px;
   margin: auto;
   display: -webkit-box;
@@ -623,6 +594,7 @@ nav ul a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  gap: 1rem;
 }
 .promotion .wrapper p {
   margin-bottom: 1rem;
@@ -635,6 +607,9 @@ nav ul a {
 }
 
 @media (min-width: 1000px) {
+  .promotion .wrapper {
+    padding-top: 150px;
+  }
   .promotion .wrapper h2 {
     text-align: left;
   }
@@ -677,6 +652,7 @@ nav ul a {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  gap: 1rem;
   width: 100%;
 }
 .nature .wrapper .natureContent p {
@@ -754,4 +730,13 @@ header {
   background-position: center;
   width: 100%;
   height: 50vh;
+}
+
+.headerImg {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
 }
