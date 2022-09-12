@@ -314,29 +314,6 @@ header .wrapper {
       -ms-flex-align: space-between;
           align-items: space-between;
 }
-header .wrapper .left {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-}
-header .wrapper .left ul {
-  padding: 0;
-}
-header .wrapper .right {
-  position: relative;
-  bottom: -50px;
-  right: -33px;
-}
-header .wrapper .right img {
-  width: 100%;
-}
 
 @media (min-width: 1000px) {
   header .wrapper {
@@ -345,30 +322,6 @@ header .wrapper .right img {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-  }
-  header .wrapper .left {
-    width: 50%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
-  }
-  header .wrapper .left ul {
-    padding: 0;
-  }
-  header .wrapper .right {
-    width: 50%;
-  }
-  header .wrapper .right img {
-    position: relative;
-    bottom: -100px;
-    width: 100%;
   }
 }
 nav ul {
@@ -410,24 +363,27 @@ footer {
   width: 90%;
   padding-right: 5%;
 }
-.contactForm ::-webkit-input-placeholder {
+.contactForm .formItem {
   color: white;
+}
+.contactForm ::-webkit-input-placeholder {
+  color: rgba(255, 255, 255, 0.5);
   opacity: 1;
 }
 .contactForm ::-moz-placeholder {
-  color: white;
+  color: rgba(255, 255, 255, 0.5);
   opacity: 1;
 }
 .contactForm :-ms-input-placeholder {
-  color: white;
+  color: rgba(255, 255, 255, 0.5);
   opacity: 1;
 }
 .contactForm ::-ms-input-placeholder {
-  color: white;
+  color: rgba(255, 255, 255, 0.5);
   opacity: 1;
 }
 .contactForm ::placeholder {
-  color: white;
+  color: rgba(255, 255, 255, 0.5);
   opacity: 1;
 }
 .contactForm .formSmall {
@@ -451,6 +407,10 @@ footer {
   color: white;
   padding: 20px;
   margin-bottom: 30px;
+  outline: 0px none transparent;
+}
+.contactForm textarea :focus {
+  outline: 0;
 }
 .contactForm .button {
   width: 100%;

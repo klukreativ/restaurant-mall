@@ -18,8 +18,12 @@
         }
     }
 
-    ::placeholder {
+    .formItem{
         color: white;
+    }
+
+    ::placeholder {
+        color: rgba(255,255,255,0.5);
         opacity: 1;
     }
 
@@ -46,6 +50,10 @@
         color: white;
         padding: 20px;
         margin-bottom: 30px;
+        outline: 0px none transparent;
+        :focus{
+            outline: 0;
+        }
     }
 
     .button {
