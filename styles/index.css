@@ -400,6 +400,9 @@ nav ul a {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 .info ul li {
   display: -webkit-box;
@@ -510,6 +513,7 @@ nav ul a {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  gap: 1rem;
 }
 .articleContainerOne .articleContent p,
 .articleContainerTwo .articleContent p {
