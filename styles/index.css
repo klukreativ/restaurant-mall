@@ -325,9 +325,8 @@ header .wrapper .headerImg img {
             flex-direction: row;
   }
   header .wrapper .headerImg {
-    top: 10vw;
+    top: 12vw;
     width: 50%;
-    max-width: 700px;
   }
   header .wrapper .headerImg img {
     width: 100%;
@@ -612,7 +611,7 @@ header .wrapper .headerImg img {
 
 @media (min-width: 1000px) {
   .info ul {
-    padding-top: 17vw;
+    padding-top: 21vw;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;

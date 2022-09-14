@@ -325,9 +325,8 @@ header .wrapper .headerImg img {
             flex-direction: row;
   }
   header .wrapper .headerImg {
-    top: 10vw;
+    top: 12vw;
     width: 50%;
-    max-width: 700px;
   }
   header .wrapper .headerImg img {
     width: 100%;
