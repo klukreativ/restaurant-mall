@@ -4,6 +4,7 @@
     ul {
         padding-bottom: 150px;
         padding-top: 50vw; //this resizes according to width to scale w/header img
+        padding-left: 0;
         display: flex;
         flex-direction: column;
         align-items: flex-start;
@@ -12,7 +13,7 @@
             flex-direction: column;
             align-items: center;
             width: 80%;
-            margin: 20px;
+            margin: 20px auto;
             gap: 30px;
             h2 {
                 text-align: center;

@@ -554,6 +554,7 @@ header .wrapper .headerImg img {
 .info ul {
   padding-bottom: 150px;
   padding-top: 50vw;
+  padding-left: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -577,7 +578,7 @@ header .wrapper .headerImg img {
       -ms-flex-align: center;
           align-items: center;
   width: 80%;
-  margin: 20px;
+  margin: 20px auto;
   gap: 30px;
 }
 .info ul li h2 {
