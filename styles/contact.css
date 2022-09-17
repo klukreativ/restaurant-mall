@@ -306,7 +306,7 @@ header .wrapper {
   height: 60vh;
 }
 header .wrapper .title {
-  padding: 50px;
+  padding: 5vw;
 }
 header .wrapper .headerImg {
   position: absolute;
