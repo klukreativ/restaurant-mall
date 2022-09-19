@@ -662,14 +662,13 @@ h1 {
   -webkit-box-shadow: 25px 25px #FFD300;
           box-shadow: 25px 25px #FFD300;
   position: relative;
-  top: -200px;
-  left: -12.5px;
+  top: -12vh;
+  left: -12px;
   padding: 50px;
 }
 
 .contactInfoContainer {
   position: relative;
-  top: -10vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -715,8 +714,9 @@ h1 {
             flex-direction: row-reverse;
   }
   .contactForm {
+    left: auto;
     width: 50%;
-    right: 150px;
+    right: 12.5vw;
     margin: 0;
   }
   .contactInfoContainer {

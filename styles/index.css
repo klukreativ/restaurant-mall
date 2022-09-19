@@ -553,7 +553,7 @@ header .wrapper .headerImg img {
   }
 }
 .info ul {
-  padding-bottom: 150px;
+  padding-bottom: 50px;
   padding-top: 50vw;
   padding-left: 0;
   display: -webkit-box;
@@ -613,6 +613,7 @@ header .wrapper .headerImg img {
 
 @media (min-width: 1000px) {
   .info ul {
+    padding-bottom: 100px;
     padding-top: 21vw;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;

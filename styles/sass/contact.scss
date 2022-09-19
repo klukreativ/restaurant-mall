@@ -28,14 +28,13 @@ h1 {
     width: 80%;
     box-shadow: 25px 25px $highlightColor;
     position: relative;
-    top: -200px;
-    left: -12.5px;
+    top: -12vh;
+    left: -12px;
     padding: 50px;
 }
 
 .contactInfoContainer{
     position: relative;
-    top: -10vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -66,8 +65,9 @@ h1 {
     }
 
     .contactForm {
+        left: auto;
         width: 50%;
-        right: 150px;
+        right: 12.5vw;
         margin: 0;
     }
 

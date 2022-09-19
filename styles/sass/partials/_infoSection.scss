@@ -2,7 +2,7 @@
 
 .info {
     ul {
-        padding-bottom: 150px;
+        padding-bottom: 50px;
         padding-top: 50vw; //this resizes according to width to scale w/header img
         padding-left: 0;
         display: flex;
@@ -45,6 +45,7 @@
 
 @media (min-width: 1000px) {
     .info ul {
+        padding-bottom: 100px;
         padding-top: 21vw;
         flex-direction: row;
         flex-wrap: wrap;
