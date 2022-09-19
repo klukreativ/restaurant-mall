@@ -694,6 +694,7 @@ img {
 
 .blogImageContainer {
   position: relative;
+  right: -10px;
   top: -5rem;
 }
 
@@ -703,7 +704,6 @@ img {
 }
 
 .blogCommentSection {
-  width: 90%;
   padding: 5% 10%;
   margin: auto;
   background-color: rgba(0, 0, 0, 0.2);

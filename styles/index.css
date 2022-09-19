@@ -706,6 +706,8 @@ header .wrapper .headerImg img {
           justify-content: center;
 }
 .articleImage img {
+  position: relative;
+  left: -10px;
   width: 80%;
   -webkit-box-shadow: 20px 20px #FFD300;
           box-shadow: 20px 20px #FFD300;
@@ -720,6 +722,8 @@ header .wrapper .headerImg img {
     width: 50%;
   }
   .articleImage img {
+    position: static;
+    left: 0;
     width: 100%;
     max-width: 700px;
     position: relative;
@@ -729,6 +733,11 @@ header .wrapper .headerImg img {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
+  }
+  .articleContainerOne .articleContent {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
   }
   .articleContainerOne .articleImage {
     display: block;
@@ -836,13 +845,17 @@ header .wrapper .headerImg img {
 }
 .nature .wrapper .natureImage {
   width: 100%;
-  max-width: 50vw;
   margin-bottom: 50px;
 }
 .nature .wrapper .natureImage img {
+  position: relative;
+  right: -7.5px;
   width: 100%;
+  max-height: 300px;
   -webkit-box-shadow: -15px 15px #FFD300;
           box-shadow: -15px 15px #FFD300;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .nature .wrapper .natureContent {
   display: -webkit-box;
@@ -852,6 +865,9 @@ header .wrapper .headerImg img {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   gap: 1rem;
   width: 100%;
 }
@@ -867,6 +883,11 @@ header .wrapper .headerImg img {
   width: fit-content;
 }
 
+@media (min-width: 600px) and (max-width: 999px) {
+  .nature .wrapper .natureImage {
+    max-width: 60vw;
+  }
+}
 @media (min-width: 1000px) {
   .nature .wrapper {
     padding: 150px 150px 100px;
@@ -879,13 +900,18 @@ header .wrapper .headerImg img {
             align-items: flex-start;
     gap: 50px;
   }
-  .natureImage {
-    width: 33%;
+  .nature .wrapper .natureImage {
+    width: 50%;
     margin-bottom: 0;
   }
-  .natureImage img {
-    width: 40%;
+  .nature .wrapper .natureImage img {
     max-width: 400px;
+    max-height: 100%;
+  }
+  .nature .wrapper .natureContent {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
   }
 }
 .gallery .wrapper {
