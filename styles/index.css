@@ -189,7 +189,7 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
   color: #FFD300;
 }
 
-h1, h2, h5, .button {
+h1, h2, h5, h3, .button {
   font-family: "Josefin Sans";
   text-transform: uppercase;
 }
@@ -220,6 +220,10 @@ h2 {
   margin: 0;
   font-size: clamp(2rem, 8vw, 2.813rem);
   line-height: 3rem;
+}
+
+h3 {
+  font-size: clamp(1.25rem, 2vw, 2rem);
 }
 
 h5 {

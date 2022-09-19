@@ -189,7 +189,7 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
   color: #FFD300;
 }
 
-h1, h2, h5, .button {
+h1, h2, h5, h3, .button {
   font-family: "Josefin Sans";
   text-transform: uppercase;
 }
@@ -220,6 +220,10 @@ h2 {
   margin: 0;
   font-size: clamp(2rem, 8vw, 2.813rem);
   line-height: 3rem;
+}
+
+h3 {
+  font-size: clamp(1.25rem, 2vw, 2rem);
 }
 
 h5 {
@@ -667,7 +671,7 @@ img {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  width: 80%;
+  width: 100%;
   margin: auto;
 }
 
@@ -684,15 +688,18 @@ img {
 }
 
 .blogPost {
+  width: 80%;
+  margin: auto;
   margin-bottom: 5rem;
 }
 
 .blogMain {
   position: relative;
-  top: -6rem;
 }
 
 .blogImageContainer {
+  width: 80%;
+  margin: auto;
   position: relative;
   right: -10px;
   top: -5rem;
@@ -704,7 +711,7 @@ img {
 }
 
 .blogCommentSection {
-  padding: 5% 10%;
+  padding: 4rem 2rem;
   margin: auto;
   background-color: rgba(0, 0, 0, 0.2);
 }
@@ -731,11 +738,10 @@ img {
 
 .blogSide {
   background-color: #171B0E;
-  padding: 2rem;
+  padding: 4rem 2rem;
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
-  margin-bottom: 3rem;
 }
 
 .blogSideRecent li {
@@ -759,6 +765,9 @@ img {
   }
   .blogMain {
     width: 100%;
+  }
+  .blogCommentSection {
+    margin-bottom: 5rem;
   }
   .blogImageContainer {
     width: 60vw;
