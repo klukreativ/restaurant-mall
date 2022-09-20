@@ -43,6 +43,12 @@
     }
 }
 
+@media (min-width: 320px) and (max-width: 600px) {
+    .info ul {
+        padding-top: 175px;
+    }
+}
+
 @media (min-width: 1000px) {
     .info ul {
         padding-bottom: 100px;

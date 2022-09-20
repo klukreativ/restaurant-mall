@@ -17,6 +17,15 @@ header .wrapper {
     }
 }
 
+@media (min-width: 320px) and (max-width: 600px) {
+    header .wrapper {
+        height: 50vh;
+        .headerImg{
+            max-width: 400px;
+        }
+    }
+}
+
 @media (min-width: 1000px) {
     header .wrapper{
         .headerImg {           

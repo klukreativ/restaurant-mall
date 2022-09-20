@@ -325,6 +325,14 @@ header .wrapper .headerImg img {
   width: 100%;
 }
 
+@media (min-width: 320px) and (max-width: 600px) {
+  header .wrapper {
+    height: 50vh;
+  }
+  header .wrapper .headerImg {
+    max-width: 400px;
+  }
+}
 @media (min-width: 1000px) {
   header .wrapper {
     -webkit-box-orient: horizontal;
@@ -618,6 +626,11 @@ header .wrapper .headerImg img {
   margin-bottom: 15px;
 }
 
+@media (min-width: 320px) and (max-width: 600px) {
+  .info ul {
+    padding-top: 175px;
+  }
+}
 @media (min-width: 1000px) {
   .info ul {
     padding-bottom: 100px;
