@@ -3,7 +3,7 @@
 .info {
     ul {
         padding-bottom: 50px;
-        padding-top: 50vw; //this resizes according to width to scale w/header img
+        padding-top: 300px; //this resizes according to width to scale w/header img
         padding-left: 0;
         display: flex;
         flex-direction: column;
@@ -46,7 +46,7 @@
 @media (min-width: 1000px) {
     .info ul {
         padding-bottom: 100px;
-        padding-top: 21vw;
+        padding-top: 175px;
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: center;

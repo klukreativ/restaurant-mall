@@ -309,13 +309,16 @@ ul {
 
 header .wrapper {
   height: 60vh;
+  min-height: 50vw;
 }
 header .wrapper .title {
   padding: 5vw;
 }
 header .wrapper .headerImg {
   position: absolute;
+  top: 300px;
   width: 80vw;
+  max-width: 500px;
   right: 0;
 }
 header .wrapper .headerImg img {
@@ -330,8 +333,8 @@ header .wrapper .headerImg img {
             flex-direction: row;
   }
   header .wrapper .headerImg {
-    top: 12vw;
     width: 50%;
+    max-width: 100%;
   }
   header .wrapper .headerImg img {
     width: 100%;

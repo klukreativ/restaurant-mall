@@ -1,12 +1,15 @@
 header .wrapper {    
-    height: 60vh;   
+    height: 60vh;
+    min-height: 50vw;   
     
     .title {
         padding: 5vw;
     }
     .headerImg{
         position: absolute;
+        top: 300px;
         width: 80vw;
+        max-width: 500px;
         right: 0;
         img {
             width: 100%;
@@ -16,10 +19,9 @@ header .wrapper {
 
 @media (min-width: 1000px) {
     header .wrapper{
-        .headerImg {
-            top: 12vw;
+        .headerImg {           
             width: 50%;
-            
+            max-width: 100%;
             img {
                 width: 100%;
             }

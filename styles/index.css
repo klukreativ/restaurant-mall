@@ -309,13 +309,16 @@ ul {
 
 header .wrapper {
   height: 60vh;
+  min-height: 50vw;
 }
 header .wrapper .title {
   padding: 5vw;
 }
 header .wrapper .headerImg {
   position: absolute;
+  top: 300px;
   width: 80vw;
+  max-width: 500px;
   right: 0;
 }
 header .wrapper .headerImg img {
@@ -330,8 +333,8 @@ header .wrapper .headerImg img {
             flex-direction: row;
   }
   header .wrapper .headerImg {
-    top: 12vw;
     width: 50%;
+    max-width: 100%;
   }
   header .wrapper .headerImg img {
     width: 100%;
@@ -558,7 +561,7 @@ header .wrapper .headerImg img {
 }
 .info ul {
   padding-bottom: 50px;
-  padding-top: 50vw;
+  padding-top: 300px;
   padding-left: 0;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -618,7 +621,7 @@ header .wrapper .headerImg img {
 @media (min-width: 1000px) {
   .info ul {
     padding-bottom: 100px;
-    padding-top: 21vw;
+    padding-top: 175px;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
