@@ -168,7 +168,7 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
 
 @font-face {
   font-family: "Josefin Sans";
-  src: url("../JosefinSans/josefin-sans-latin-400-normal.woff"), url("../fonts/JosefinSans/JosefinSans-Regular.ttf"), url("../JosefinSans/josefin-sans-latin-400-normal.woff2");
+  src: url("../fonts/JosefinSans/josefin-sans-latin-400-normal.woff"), url("../fonts/JosefinSans/JosefinSans-Regular.ttf"), url("../fonts/JosefinSans/josefin-sans-latin-400-normal.woff2");
   font-weight: normal;
 }
 @font-face {
@@ -253,6 +253,8 @@ p {
   line-height: 2.6rem;
   text-decoration: none;
   border: none;
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
 }
 
 .btnLight {
@@ -260,11 +262,21 @@ p {
   background-color: #FFD300;
   padding: 5px 15px;
 }
+.btnLight:hover {
+  background-color: white;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
 
 .btnDark {
   background-color: #0f0f0f;
   color: #FFFFFF;
   padding: 10px 20px;
+}
+.btnDark:hover {
+  background-color: #FFD300;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 @media (min-width: 1000px) {
@@ -615,6 +627,8 @@ header .wrapper .headerImg img {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
 }
 .infoIconContainer .infoIcons {
   width: 4.5rem;
@@ -655,6 +669,10 @@ header .wrapper .headerImg img {
             align-items: flex-start;
     width: 40%;
     gap: 5%;
+  }
+  .info ul li:hover .infoIconContainer {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
   }
   .info ul li h2 {
     text-align: left;

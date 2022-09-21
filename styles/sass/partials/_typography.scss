@@ -2,9 +2,9 @@
 
 @font-face {
     font-family: "Josefin Sans";
-    src: url('../JosefinSans/josefin-sans-latin-400-normal.woff'),
+    src: url('../fonts/JosefinSans/josefin-sans-latin-400-normal.woff'),
         url('../fonts/JosefinSans/JosefinSans-Regular.ttf'),
-        url('../JosefinSans/josefin-sans-latin-400-normal.woff2');
+        url('../fonts/JosefinSans/josefin-sans-latin-400-normal.woff2');
     font-weight: normal;
 }
 
@@ -88,18 +88,27 @@ p {
     line-height: 2.6rem;
     text-decoration: none;
     border: none;
+    transition: 0.3s ease-in-out;
 }
 
 .btnLight{
     color: $black;
     background-color: $highlightColor;
     padding: 5px 15px;
+    &:hover{
+        background-color: white;
+        transform: scale(1.1);
+    }
 }
 
 .btnDark {
     background-color: $black;
     color: $textColor;    
     padding: 10px 20px;
+    &:hover{
+        background-color: $highlightColor;
+        transform: scale(1.1);
+    }
 }
 
 @media (min-width: 1000px) {

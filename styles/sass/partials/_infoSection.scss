@@ -30,9 +30,11 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: 0.3s ease-in-out;
+    
     .infoIcons {
         width: 4.5rem;
-        height: 4.5rem;
+        height: 4.5rem;        
     }
 }
 
@@ -61,6 +63,12 @@
             align-items: flex-start;
             width: 40%;
             gap: 5%;
+            &:hover{
+                .infoIconContainer{
+                    transform: scale(1.2);
+                }
+                
+            }
             h2 {
                 text-align: left;
             }

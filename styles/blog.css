@@ -168,7 +168,7 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
 
 @font-face {
   font-family: "Josefin Sans";
-  src: url("../JosefinSans/josefin-sans-latin-400-normal.woff"), url("../fonts/JosefinSans/JosefinSans-Regular.ttf"), url("../JosefinSans/josefin-sans-latin-400-normal.woff2");
+  src: url("../fonts/JosefinSans/josefin-sans-latin-400-normal.woff"), url("../fonts/JosefinSans/JosefinSans-Regular.ttf"), url("../fonts/JosefinSans/josefin-sans-latin-400-normal.woff2");
   font-weight: normal;
 }
 @font-face {
@@ -253,6 +253,8 @@ p {
   line-height: 2.6rem;
   text-decoration: none;
   border: none;
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
 }
 
 .btnLight {
@@ -260,11 +262,21 @@ p {
   background-color: #FFD300;
   padding: 5px 15px;
 }
+.btnLight:hover {
+  background-color: white;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
 
 .btnDark {
   background-color: #0f0f0f;
   color: #FFFFFF;
   padding: 10px 20px;
+}
+.btnDark:hover {
+  background-color: #FFD300;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 @media (min-width: 1000px) {
@@ -581,14 +593,8 @@ footer {
   all: unset;
 }
 .contactForm .formControl {
+  width: 100%;
   margin-bottom: 50px;
-}
-.contactForm .formControl .formItem {
-  margin-bottom: 10px;
-  width: 90%;
-  padding-right: 5%;
-}
-.contactForm .formItem {
   color: white;
 }
 .contactForm ::-webkit-input-placeholder {
@@ -613,8 +619,8 @@ footer {
 }
 .contactForm .formSmall {
   border-bottom: 2px solid #FFD300;
-  padding: 20px;
   width: 100%;
+  padding: 20px 0;
 }
 .contactForm .formBody {
   width: 100%;
@@ -650,10 +656,14 @@ footer {
         -ms-flex-pack: justify;
             justify-content: space-between;
   }
-  .contactForm .formControl .formItem {
-    display: inline-block;
-    width: 45%;
-    margin-bottom: 1rem;
+  .contactForm .formSmall {
+    width: 48%;
+  }
+  .contactForm .formSmallL {
+    margin-right: 2%;
+  }
+  .contactForm .formSmallR {
+    margin-left: 2%;
   }
 }
 header {
