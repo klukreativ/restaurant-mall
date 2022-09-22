@@ -1,10 +1,18 @@
 const defaultVal = [
     {
-        userName: 'Ali', userImage: 'comment-1.jpg', userEmail: 'karl@karl.com', userComment: `Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias adipisci error
+        userName: 'Ali',
+        userImage: 'comment-1.jpg', 
+        userEmail: 'ali@ali.com', 
+        userDate: 'Wednesday, October 10th, 2019', 
+        userComment: `Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias adipisci error
 expedita odio aspernatur laborum at. Fugiat dignissimos neque voluptas iure, rem
 consectetur, laudantium voluptatem mollitia quo a, cumque quos?` },
     {
-        userName: 'Lisa', userImage: 'comment-2.jpg', userEmail: 'garou@garou.com', userComment: `Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias adipisci error
+        userName: 'Lisa', 
+        userImage: 'comment-2.jpg', 
+        userEmail: 'lisa@lisa.com',
+        userDate: 'Thursday, October 11th, 2019',
+        userComment: `Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias adipisci error
 expedita odio aspernatur laborum at. Fugiat dignissimos neque voluptas iure, rem
 consectetur, laudantium voluptatem mollitia quo a, cumque quos?` }
 ]
@@ -25,6 +33,7 @@ formElement.addEventListener('submit', (e) => {
         userName: userName.value,
         userImage: 'default.png', // defaults to this image
         userEmail: userEmail.value,
+        userDate: createDate(),
         userComment: userComment.value
     }
 
@@ -71,7 +80,7 @@ function populate() {
                 </div>
                 <div class="blogCommentContent">
                     <p class="date secondary">
-                        Wednesday October 10th, 2019 by ${currentComments[i].userName}
+                        ${currentComments[i].userDate} by ${currentComments[i].userName}
                     </p>
                     <p>${currentComments[i].userComment}</p>
                 </div>
@@ -79,6 +88,15 @@ function populate() {
             `
         )
     }
+}
+
+// creates a date 
+function createDate() {
+    const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'October', 'September', 'November', 'December'];
+    const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']
+    const theDate = new Date();
+    const stringDate = (`${days[theDate.getDay()]}, ${months[theDate.getMonth()]} ${theDate.getDay()}th, ${theDate.getFullYear()}`)    
+    return stringDate;
 }
 
 // initializes comment array
