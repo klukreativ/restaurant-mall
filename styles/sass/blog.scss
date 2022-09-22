@@ -97,6 +97,10 @@ img {
     letter-spacing: 0.063rem;
 }
 
+.userImage{
+    border-radius: 50%;
+}
+
 @media (min-width: 1000px) {
     .blogContent {
         flex-direction: row-reverse;

@@ -82,47 +82,23 @@
                     </div>
                     <div class="blogCommentSection">
                         <h2 class="primary">Comments:</h2>
-                        <div class="blogComment">
-                            <div class="blogCommentImg">
-                                <img src="../assets/comment-1.jpg" alt="user image">
-                            </div>
-                            <div class="blogCommentContent">
-                                <p class="date secondary">
-                                    Tuesday October 9th, 2019 by Ali
-                                </p>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias adipisci error
-                                    expedita odio aspernatur laborum at. Fugiat dignissimos neque voluptas iure, rem
-                                    consectetur, laudantium voluptatem mollitia quo a, cumque quos?</p>
-                            </div>
-                        </div>
-                        <div class="blogComment">
-                            <div class="blogCommentImg">
-                                <img src="../assets/comment-2.jpg" alt="user image">
-                            </div>
-                            <div class="blogCommentContent">
-                                <p class="date secondary">
-                                    Wednesday October 10th, 2019 by Lisa
-                                </p>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias adipisci error
-                                    expedita odio aspernatur laborum at. Fugiat dignissimos neque voluptas iure, rem
-                                    consectetur, laudantium voluptatem mollitia quo a, cumque quos?</p>
-                            </div>
+                        <div id="blogCommentArea">
                         </div>
                         <h3 class="primary">Leave a Comment:</h3>
                         <div class="contactForm">
-                            <form action="">
+                            <form action="" id="commentForm">
                                 <div class="formControl">
                                     <label for="contactName"></label>
-                                    <input type="text" name="contactName" id="contactName" placeholder="Name"
-                                        class="formSmall formSmallL">
+                                    <input type="text" name="contactName" id="formName" placeholder="Name"
+                                        class="formSmall formSmallL" required>
                                     <label for="contactEmail"></label>
-                                    <input type="email" name="contactEmail" id="contactEmail"
-                                        placeholder="Email address" class="formSmall formSmallR">
+                                    <input type="email" name="contactEmail" id="formEmail"
+                                        placeholder="Email address" class="formSmall formSmallR" required>
                                 </div>
                                 <div>
-                                    <textarea placeholder="Comment"></textarea>
+                                    <textarea placeholder="Comment" id="formComment"></textarea>
                                 </div>
-                                <input type="submit" class='button btnLight' value="post comment">
+                                <input type="submit" class='button btnLight' value="post comment" required>
                             </form>
                         </div>
                     </div>
@@ -157,6 +133,7 @@
     <footer>
         <p>Copyright &copy 2019 Juno College</p>
     </footer>
+    <script src="./js/comment.js"></script>
 </body>
 
 </html>
