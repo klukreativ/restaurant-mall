@@ -1,15 +1,15 @@
 const defaultVal = [
     {
         userName: 'Ali',
-        userImage: 'comment-1.jpg', 
-        userEmail: 'ali@ali.com', 
-        userDate: 'Wednesday, October 10th, 2019', 
+        userImage: 'comment-1.jpg',
+        userEmail: 'ali@ali.com',
+        userDate: 'Wednesday, October 10th, 2019',
         userComment: `Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias adipisci error
 expedita odio aspernatur laborum at. Fugiat dignissimos neque voluptas iure, rem
 consectetur, laudantium voluptatem mollitia quo a, cumque quos?` },
     {
-        userName: 'Lisa', 
-        userImage: 'comment-2.jpg', 
+        userName: 'Lisa',
+        userImage: 'comment-2.jpg',
         userEmail: 'lisa@lisa.com',
         userDate: 'Thursday, October 11th, 2019',
         userComment: `Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias adipisci error
@@ -56,8 +56,6 @@ formElement.addEventListener('submit', (e) => {
 function getComments(key) {
     let val;
     try {
-        console.log('checking in localstorage');
-        // figure out the purpose of String later.
         val = JSON.parse(window.localStorage.getItem(key) || String(defaultVal))
     } catch (e) {
         console.log(e);
@@ -94,9 +92,28 @@ function populate() {
 function createDate() {
     const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'October', 'September', 'November', 'December'];
     const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']
-    const theDate = new Date();
-    const stringDate = (`${days[theDate.getDay()]}, ${months[theDate.getMonth()]} ${theDate.getDay()}th, ${theDate.getFullYear()}`)    
+    const d = new Date();
+    const dDay = d.getUTCDate();
+    const stringDate = (`
+    ${days[d.getDay()]}, 
+    ${months[d.getMonth()]} 
+    ${dDay}${daySuffix(dDay)}, 
+    ${d.getFullYear()}
+    `)
     return stringDate;
+}
+
+// returns the correct suffix depending on day
+function daySuffix(d) {
+    if (d === 1 || d === 21 || d === 31) {
+        return 'st';
+    } else if (d === 2 || d === 22) {
+        return 'nd';
+    } else if (d === 3 || d === 23) {
+        return 'rd';
+    } else {
+        return 'th';
+    }
 }
 
 // initializes comment array
