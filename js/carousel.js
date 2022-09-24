@@ -19,7 +19,7 @@ function moveSlide() {
 // function that updates all classes to active or not on every change
 function classToggle(activeButton) {
   for (i = 0; i < 4; i++) {
-    i != activeButton ? newBtns[i].classList.remove('active') : newBtns[i].classList.add('active');
+    i != activeButton ? slideBtns[i].classList.remove('active') : slideBtns[i].classList.add('active');
   }
 }
 
