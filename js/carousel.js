@@ -6,8 +6,8 @@ slides.forEach((slide, indx) => {
   slide.style.transform = `translateX(${indx * 100}%)`;
 });
 
-// current slide counter
-let curSlide = 0;
+// current slide counter starts at -1 as autoScroll runs on page load pushing to 0
+let curSlide = -1;
 
 // updates slide location
 function moveSlide() {
@@ -16,6 +16,21 @@ function moveSlide() {
   });
 }
 
+// function that updates all classes to active or not on every change
+function classToggle(activeButton) {
+  for (i = 0; i < 4; i++) {
+    i != activeButton ? newBtns[i].classList.remove('active') : newBtns[i].classList.add('active');
+  }
+}
+
+// autoscroll feature that will scroll through each slide every 5s
+function autoScroll() {
+  curSlide++;
+  curSlide < 4 ? '' : curSlide = 0;
+  classToggle(curSlide);
+  moveSlide();
+  setTimeout(autoScroll, 5000);
+}
 
 // initialized on page load 
 const icons = ['location-dot-solid', 'users-solid', 'file-solid', 'phone-flip-solid'];
@@ -36,10 +51,10 @@ newBtns = document.querySelectorAll('.newBtn');
 for (i = 0; i < 4; i++) {
   let j = i;
   newBtns[i].addEventListener('click', function () {
-    for (k = 0; k < 4; k++) {
-      k != j ? newBtns[k].classList.remove('active') : newBtns[k].classList.add('active');
-    }
+    classToggle(j);
     curSlide = j;
     moveSlide();
   })
 }
+
+autoScroll();
