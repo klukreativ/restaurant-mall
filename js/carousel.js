@@ -39,18 +39,19 @@ const buttonContainer = document.querySelector('.buttonContainer');
 
 for (i = 0; i < 4; i++) {
   buttonContainer.innerHTML += (
-    `<div class='newBtn infoIconContainer'>
+    `<div class='slideBtn'>
       <img src='./assets/${icons[i]}.svg' class='infoIcons'>
     </div>
     `
   )
 }
 
-newBtns = document.querySelectorAll('.newBtn');
-
+// gathers all slide buttons
+slideBtns = document.querySelectorAll('.slideBtn');
+// assigns event listener to each button that allows it to direct to its own slide on click
 for (i = 0; i < 4; i++) {
   let j = i;
-  newBtns[i].addEventListener('click', function () {
+  slideBtns[i].addEventListener('click', function () {
     classToggle(j);
     curSlide = j;
     moveSlide();
